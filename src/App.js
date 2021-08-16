@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import './App.css';
 
+export function replaceCamelCaseWithSpace(colorName) {
+  return colorName.replace(/\B([A-Z])\B/g, ' $1')
+}
+
 function App() {
 
   const [buttonColor, setButtonColor] = useState('red')
@@ -11,18 +15,20 @@ function App() {
     <div className="App">
       <button
         style={{ backgroundColor: buttonColor }}
-        disabled = {disabled}
-        onClick={() => {setButtonColor(newButtonColor)}}
+        disabled={disabled}
+        onClick={() => { setButtonColor(newButtonColor) }}
       >
-        Change to { newButtonColor }
+        Change to {newButtonColor}
       </button>
       <input
         type="checkbox"
         id="disable-button-checkbox"
+        // htmlFor property onlable bind with the input id - should be the same identifier
         aria-checked={disabled}
         defaultChecked={disabled}
         onClick={() => setDisabled(!disabled)} />
-      <label htmlFor="disable-button-checkbox">Disable button</label>"
+      <label htmlFor="disable-button-checkbox">Disable button</label>
+
     </div>
   );
 }
