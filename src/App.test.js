@@ -6,13 +6,13 @@ describe('render a button in the page', () => {
 
   it('button is in the page', () => {
     render(<App />);
-    const colorButton = screen.getByRole('button', { name: /change to blue/i })
+    const colorButton = screen.getByRole('button', { name: /change to MidnightBlue/i })
     expect(colorButton).toBeInTheDocument()
   })
 
   it('render an enabled button and no checked checkbox', () => {
     render(<App />)
-    const colorButton = screen.getByRole('button', { name: /change to blue/i })
+    const colorButton = screen.getByRole('button', { name: /change to MidnightBlue/i })
     expect(colorButton).toBeEnabled()
 
     const checkbox = screen.getByRole('checkbox')
@@ -21,24 +21,24 @@ describe('render a button in the page', () => {
 
   it('button has correct initial text and color', () => {
     render(<App />);
-    const colorButton = screen.getByRole('button', { name: /change to blue/i })
-    expect(colorButton).toHaveStyle({ backgroundColor: 'red' })
+    const colorButton = screen.getByRole('button', { name: /change to MidnightBlue/i })
+    expect(colorButton).toHaveStyle({ backgroundColor: 'MediumVioletRed' })
   })
 
   it('button change color and text on click', () => {
     render(<App />)
-    const colorButton = screen.getByRole('button', { name: /change to blue/i })
+    const colorButton = screen.getByRole('button', { name: /change to MidnightBlue/i })
 
     fireEvent.click(colorButton)
-    expect(colorButton).toHaveStyle({ backgroundColor: 'blue' })
+    expect(colorButton).toHaveStyle({ backgroundColor: 'MidnightBlue' })
 
-    expect(colorButton.textContent).toBe('Change to red')
+    expect(colorButton.textContent).toBe('Change to MediumVioletRed')
   })
 
   test('Checkbox disables button on first click and enables on second click', () => {
     render(<App />)
     const checkbox = screen.getByRole('checkbox', { name: /Disable button/i })
-    const button = screen.getByRole('button', { name: /change to blue/i })
+    const button = screen.getByRole('button', { name: /change to MidnightBlue/i })
     expect(button).toBeEnabled()
 
 

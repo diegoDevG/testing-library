@@ -1,7 +1,13 @@
-# Getting Started with Create React App
+
+# Learning React Testing Library
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project includes best practices for testing apps wiht Jest and React Testing Library following the  [Udemy coruse](https://www.udemy.com/course/react-testing-library/?referralCode=0B60E8FEB40F0D159E84) and the [original repo course](https://github.com/bonnie/udemy-TESTING-LIBRARY)
+
+## Resources
+
+[Jest-Dom repo and documentation](https://github.com/testing-library/jest-dom)
 ## Available Scripts
 
 In the project directory, you can run:
@@ -39,32 +45,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Glosary
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+TTD: Test Driven Development - Write test before whiting code, then write code acording to spec set by test also knowd as "red-green" testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Regresion Testing: Adjust your test after the requirements or the code it self changes
 
-### Code Splitting
+Unit Test: Test one unit of code isolation ej. A single react component. Test how your code are whiting.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Integration Test: Test how multiple units work together
 
-### Analyzing the Bundle Size
+Functional Test: Test a particular function of software; oriented to not testing code but testing behavior
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Aceptance / End-to-end Test: Use actual browser and server(Cypres, Selenium)
