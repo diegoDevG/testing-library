@@ -52,8 +52,9 @@ describe('render a button in the page', () => {
 
 describe('spaces before camel-case capital letters', () => {
   //import on top the function in order to test it
+  // Just launch an expect for the function imported
   test('Works for no inner capital letters', () => {
-    expect(replaceCamelCaseWithSpace('Red')).toBe('Red'); // Just launch an expect for the function imported
+    expect(replaceCamelCaseWithSpace('Red')).toBe('Red');
   })
   test('Works for one inner capital letter', () => {
     expect(replaceCamelCaseWithSpace('MidnightBlue')).toBe('Midnight Blue');
